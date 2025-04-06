@@ -92,6 +92,13 @@
     "alias": "live",
     "stage": "qa"
   },
+        "repository": {
+        "name": "https://github.com/AlenaSalanevich/AWSCertifiedDeveloperAssociate2025.git",
+        "branch": "feature/pipeline"
+      },
+      "pipeline": {
+        "name": "cdk-workshop-cdk-pipeline"
+      },
   "tags": {
     "App":"cdk-workshop",
     "Environment": "QA",

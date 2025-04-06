@@ -1,0 +1,11 @@
+mkdir cdk_workshop && cd cdk_workshop
+cdk init sample-app --language python
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+export REGION=$(aws configure get region)
+export ACCOUNT=$(aws sts get-caller-identity | jq -r .Account)
+
+cdk deploy -c account=$ACCOUNT -c environmentType=qa
